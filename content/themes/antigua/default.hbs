@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="shortcut icon" href="{{asset "favicon.ico"}}"> -->
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300">
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="site-footer clearfix">
+        <section class='share'>
+            <p>Share this site</p>
+            <a href="#"><span class="icon-facebook">Facebook</span></a>
+            {{#is "post"}}
+            <a href="http://twitter.com/share?text=Just read this awesome post about {{encode post.title}} &#35;CarribeanIslandHoppers&url={{url absolute="true"}}"><span class="icon-twitter">Twitter</span></a>
+            {{/is}}
+            {{^is "post"}}
+            <a href="http://twitter.com/share?text=Check out this awesome site about Caribbean Island Hopping&url={{page.url absolute="true"}}"><span class="icon-twitter">Twitter</span></a>
+            {{/is}}
+            <a href="#"><span class="icon-googleplus">Google+</span></a>
+        </section>
+        
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+</body>
+</html>

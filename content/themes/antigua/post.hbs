@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        <a class="back-button icon-arrow-left" href="{{@blog.url}}"><span class="icon-main_page">Home</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+            <section class="post-meta">
+                <p class="visuallyhidden">This island is a good choice for:</p>
+                {{#foreach tags}}
+                    <span class="icon-{{name}}">{{name}}</span>
+                {{/foreach}}
+            </section>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+    </article>
+
+</main>
+
+{{/post}}
