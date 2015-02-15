@@ -586,20 +586,29 @@ margin on the iframe, cause it breaks stuff. */
     margin: 3.2em 4em;
     background: rgba(247, 247, 245, 0.5);
     border-radius: 3px;
-    overflow: hidden;
 }
 
 .home-template .post-meta a span {
     display: block;
     box-sizing: border-box;
     width: 100%;
+    max-width: 14em;
+    margin: 0.8em auto 0 auto;
     font-family: 'Oxygen', sans-serif;
     font-size: 0.3em;
     font-weight: 300;
     text-transform: uppercase;
     padding: 0 1.2em;
     color: #040404;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
+    white-space: normal;
+    line-height: 1.3;
+
+}
+
+.home-template .tags {
+    position: relative;
+    border-radius: 0 0 3px 3px;
 }
 
 .home-template a {
@@ -693,11 +702,36 @@ margin on the iframe, cause it breaks stuff. */
     color: #0C7489;
 }
 
+.post-template .post-meta {
+    position: relative;
+    margin-bottom: 2em;
+}
+
 .post-meta span, .share span {
     display: inline-block;
     color: #0C7489;
     width: 1em;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.post-meta [class^="icon-"] + span {
+    display: none;
+}
+
+.post-meta [class^="icon-"]:hover + span {
+    display: inline-block;
+    position: absolute;
+    top: 2.4em;
+    left: auto;
+    margin: 0 auto;
+    padding: 0.4em 0.5em 0.2em 0.5em;
+    min-height: 1.3em;
+    width: auto;
+    border: 2px solid #15B097;
+    font-size: 0.8em;
+    line-height: 1em;
+    background-color: #FFF;
 }
 
 .post-template .post p, 
@@ -771,7 +805,6 @@ text-align: center;
 
     body {
         font-size: 1.6rem;
-        line-height: 2.3rem;
     }
 
     .post-template .main-header {
@@ -783,10 +816,6 @@ text-align: center;
         margin: 0 auto;
     }
 
-    .post-template .post img {
-    padding: 0 3.4rem 2em 3.4rem;
-   }
-
     .post-template .post-header {
         margin-top: 3.4em;
     }
@@ -795,6 +824,12 @@ text-align: center;
 @media screen and (min-width: 1024px) {
     html {
         font-size: 74%;
+    }
+
+    .post-template .post p {
+        font-size: 120%;
+        line-height: 1.5;
+        padding: 0;
     }
 
     .post-template .main-nav a {
