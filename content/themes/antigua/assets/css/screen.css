@@ -251,6 +251,26 @@ table { border-collapse: collapse; border-spacing: 0; }
     content: "\e61e";
 }
 
+.icon-github:before {
+    content: "\e608";
+}
+
+.icon-linkedin:before {
+    content: "\e611";
+}
+
+.icon-cc:before {
+    content: "\e612";
+}
+
+.icon-cc-by:before {
+    content: "\e618";
+}
+
+.icon-cc-sa:before {
+    content: "\e61f";
+}
+
 
 /* ==========================================================================
    3. General - Setting up some base styles
@@ -642,6 +662,66 @@ margin on the iframe, cause it breaks stuff. */
     background: #0C7489;
     padding-top: 1.4em;
     text-align: center;
+    vertical-align: middle;
+}
+
+.site-footer h3 {
+    font-family: "Oxygen", sans-serif;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+}
+
+.about, .about div {
+    vertical-align: top;
+    text-align: left;
+}
+
+.about address {
+    display: inline-block;
+    width: auto;
+    font-style: normal;
+    line-height: 1.5em;
+    vertical-align: top;
+    padding-left: 1.3em;
+}
+
+.about address p, .share p:last-child {
+    font-weight: 300;
+    font-size: 0.85em;
+    line-height: 1.2;
+}
+
+.about address p:first-child,
+.share h3 + p {
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    word-spacing: 0.05em;
+}
+
+
+.about address a {
+    height: auto;
+    min-height: 1.4em;
+    margin: 0.3em 0.2em 0 0;
+}
+
+.about img {
+    display: inline-block;
+    width: 6em;
+    height: 6em;
+}
+
+.share h3 + p span {
+    font-size: 1.4em;
+    color: #FFF;
+    min-width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: inherit;
 }
 
 .site-footer a {
@@ -707,7 +787,7 @@ margin on the iframe, cause it breaks stuff. */
     margin-bottom: 2em;
 }
 
-.post-meta span, .share span {
+.post-meta span, .share span, .about span {
     display: inline-block;
     color: #0C7489;
     width: 1em;
@@ -739,24 +819,34 @@ margin on the iframe, cause it breaks stuff. */
     padding: 0 3.4rem;
 }
 
+.post-template .post figure {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.8em 0;
+}
+
 .post-template .post img {
-box-sizing: border-box;
-width: 100%;
-padding-bottom: 2em;
+    display: block;
+    max-width: 100%;
+}
+
+.post-template figcaption {
+    font-size: 1.4rem;
+    padding: 0 1.8em;
 }
 
 .post-template .post-header {
-font-size: 120%;
-margin: 2.4em 0 1.4em 0;
-line-height: 2em;
+    font-size: 120%;
+    margin: 2.4em 0 1.4em 0;
+    line-height: 2em;
 
 }
 
 .post-template .post p:last-child {
-box-sizing: border-box;
-width: 100%;
-padding: 0;
-text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    text-align: center;
 }
 
 .post-template p:last-child a {
@@ -766,7 +856,7 @@ text-align: center;
     color: #F7F7F5;
     background-color: #15B097;
     padding: 1.5em 0;
-    margin: 2.4em 0;
+    margin: 1.6em 0;
     text-transform: uppercase;
     text-decoration: none;
     font-family: "MadSquire-Regular";
@@ -807,6 +897,13 @@ text-align: center;
         font-size: 1.6rem;
     }
 
+    .share, .about {
+        display: inline-block;
+        box-sizing: border-box;
+        max-width: 49%;
+        padding: 0 4em;
+    }
+
     .post-template .main-header {
         min-height: 28em;
     }
@@ -814,6 +911,12 @@ text-align: center;
     .post-template .post {
         max-width: 700px;
         margin: 0 auto;
+    }
+
+    .post-template figcaption {
+        font-size: 1.2rem;
+        border: 1px solid #AFD2DB;
+        border-top: none;
     }
 
     .post-template .post-header {

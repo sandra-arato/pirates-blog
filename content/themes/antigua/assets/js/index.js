@@ -40,12 +40,7 @@
                 $('.main-header nav a').removeClass('highlight');
             }
         },
-
-        renderPosts = function(e) {
-
-        },
-
-
+        
         scrollPosition = 0,
         rotation = 45,
         vertical = 210;
@@ -61,23 +56,6 @@
             }
 
         });
-        
-
-        if ( $('body').hasClass('post-template') ) {
-            $.get({
-                url: '../ghost/api/v0.1/posts/8',
-                success: function(data){
-                    console.log('hello');
-                    console.log(data);
-                },
-                error: function(e){
-                    console.log('no good');
-                    console.log(e);
-                }
-            })
-        }
-        
-        
 
     });
 })(jQuery, window);

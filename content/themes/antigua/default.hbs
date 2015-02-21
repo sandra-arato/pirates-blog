@@ -27,16 +27,50 @@
     {{{body}}}
 
     <footer class="site-footer clearfix">
+        <section class='about'>
+            <h3>About the Island Hoppers</h3>
+            <div>
+                <img src="https://pbs.twimg.com/profile_images/565627321705447424/H08zMXfi_400x400.jpeg" alt="Sandra Szenti"/>
+                <address>
+                    <p>Sandra Szenti</p>
+                    <p>content and front-end</p>
+                    <a href="https://twitter.com/whatevertechno"><span class="icon-twitter">View her on Twitter</span></a>
+                    <a href="https://github.com/sandraszenti"><span class="icon-github">View her on Github</span></a>
+                </address>
+            </div>
+            <div>
+                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/v/t1.0-1/c55.2.545.545/s200x200/944619_10200787844953663_2130023332_n.jpg?oh=59d1862d3716cf0d8658137f1155d889&oe=5553B4E2&__gda__=1431417049_9345575cca12cdd9a0c534350292f3d5" alt="Peter Arato"/>
+                <address>
+                    <p>Peter Arato</p>
+                    <p>photos and deployment</p>
+                    <a href="uk.linkedin.com/in/petike/en"><span class="icon-linkedin">View him on Linkedin</span></a>
+                </address>
+            </div>
+        </section>
         <section class='share'>
-            <p>Share this site</p>
-            <a href="#"><span class="icon-facebook">Facebook</span></a>
-            {{#is "post"}}
-            <a href="http://twitter.com/share?text=Just read this awesome post about {{encode post.title}} &#35;CarribeanIslandHoppers&url={{url absolute="true"}}"><span class="icon-twitter">Twitter</span></a>
-            {{/is}}
-            {{^is "post"}}
-            <a href="http://twitter.com/share?text=Check out this awesome site about Caribbean Island Hopping&url={{page.url absolute="true"}}"><span class="icon-twitter">Twitter</span></a>
-            {{/is}}
-            <a href="#"><span class="icon-googleplus">Google+</span></a>
+            <div>
+                <h3>Share this site</h3>
+                <a href="#"><span class="icon-facebook">Facebook</span></a>
+                {{#is "post"}}
+                <a href="http://twitter.com/share?text=Just read this awesome post about {{encode post.title}} &#35;CarribeanIslandHoppers&url={{url absolute="true"}}"><span class="icon-twitter">Twitter</span></a>
+                {{/is}}
+                {{^is "post"}}
+                <a href="http://twitter.com/share?text=Check out this awesome site about Caribbean Island Hopping&url={{page.url absolute="true"}}"><span class="icon-twitter">Twitter</span></a>
+                {{/is}}
+                <a href="#"><span class="icon-googleplus">Google+</span></a>
+            </div>
+            <div>
+                <h3>Creative Commons</h3>
+                <p>
+                    <span class="icon-cc">Creative Commons Licence</span>
+                    <span class="icon-cc-by">Creative Commons Licence</span>
+                    <span class="icon-cc-sa">Creative Commons Licence</span>
+                </p>
+                <p>
+                    You are free to: share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the license terms.
+                </p>
+            </div>
+            
         </section>
         
     </footer>
