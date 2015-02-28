@@ -632,103 +632,106 @@ margin on the iframe, cause it breaks stuff. */
 
 
 .home-template .post-meta p:last-child {
+    box-sizing: border-box;
     padding-top: 0.4em;
     background: #F7F7F5;
     width: 100%;
 }
 
 footer.site-footer {
+    box-sizing: border-box;
+    width: 100%;
     color: #fff;
     background: #0C7489;
-
-    h3 {
-        font-family: "Oxygen", sans-serif;
-        font-size: 2rem;
-        color: #fff;
-        margin: 0;
-        padding: 0.4em 0;
-        -webkit-margin-before: 0;
-        -webkit-margin-after: 0;
-        margin-after: 0;
-        margin-before: 0;
-    }
+    text-align: center;
+    padding-bottom: 2em;
 }
 
-
-.about, .about div {
+footer.site-footer section {
     vertical-align: top;
+}
+
+footer.site-footer div{
     text-align: left;
+    padding-left: 2em;
+    width: 390px;
 }
 
-.about address {
+footer.site-footer img {
     display: inline-block;
-    width: auto;
+    max-width: 150px;
+}
+
+
+footer.site-footer address {
+    display: inline-block;
     font-style: normal;
-    line-height: 1.5em;
-    vertical-align: top;
-    padding-left: 1.3em;
 }
 
-.about address p, .share p:last-child {
-    font-weight: 300;
-    font-size: 0.85em;
-    line-height: 1.2;
+footer.site-footer address p {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1.2em;
 }
 
-.about address p:first-child,
-.share h3 + p {
-    font-weight: 500;
-    font-size: 1em;
+footer.site-footer address p:first-child {
     text-transform: uppercase;
-    letter-spacing: 0.07em;
-    word-spacing: 0.05em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+footer.site-footer h3 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    padding: 0.4em 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-after: 0;
+    margin-before: 0;
 }
 
 
-.about address a {
-    height: auto;
-    min-height: 1.4em;
-    margin: 0.3em 0.2em 0 0;
-}
-
-.about img {
-    display: inline-block;
-    width: 6em;
-    height: 6em;
-}
-
-.share h3 + p span {
-    font-size: 1.4em;
-    color: #FFF;
-    min-width: 1em;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: inherit;
-}
-
-.site-footer a {
+footer.site-footer a {
     display: inline-block;
     box-sizing: border-box;
-    width: 1.8em;
-    height: 1.8em;
-    min-height: 1em;
-    margin: 0.8em 0.3em;
+    width: 44px;
+    height: 44px;
+    margin: 3px 14px;
+    padding: 0;
+    font-size: 1rem;
     color: #F7F7F5;
-    border-radius: 1.8em;
+    border-radius: 22px;
     background-color: transparent;
+    overflow: hidden;
+    text-decoration: none;
     -webkit-transition: color ease 0.3s, background-color ease 0.3s;
     -moz-transition: color ease 0.3s, background-color ease 0.3s;
     transition: color ease 0.3s, background-color ease 0.3s;
 }
 
-.site-footer a:hover {
+footer.site-footer a:hover {
     color: #0C7489;
     background-color: #F7F7F5;
 }
 
-.site-footer a span {
-    margin-top: 0.2em;
-    color: inherit;
+footer.site-footer a span[class^="icon"] {
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    margin: 10px;
+    white-space: no-wrap;
+}
+
+footer.site-footer a:hover span[class^="icon"] {
+    color: #0C7489;
+}
+
+footer .share p:last-child {
+    padding: 0 1.4em;
+    font-size: 80%;
+    line-height: 1.4em;
 }
 
 /* ==========================================================================
@@ -769,7 +772,7 @@ footer.site-footer {
     margin-bottom: 2em;
 }
 
-.post-meta span, .share span, .about span {
+.post-meta span {
     display: inline-block;
     color: #0C7489;
     width: 1em;
@@ -879,13 +882,7 @@ footer.site-footer {
         font-size: 1.6rem;
     }
 
-    .share, .about {
-        display: inline-block;
-        box-sizing: border-box;
-        max-width: 49%;
-        padding: 0 4em;
-    }
-
+    
     .post-template .main-header {
         min-height: 28em;
     }
@@ -906,7 +903,7 @@ footer.site-footer {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 980px) {
     html {
         font-size: 74%;
     }
@@ -920,4 +917,12 @@ footer.site-footer {
     .post-template .main-nav a {
         position: fixed;
     }
+
+    .share, .about {
+        display: inline-block;
+        box-sizing: border-box;
+        max-width: 40%;
+        padding: 0 4em;
+    }
+
 }
