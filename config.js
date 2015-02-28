@@ -12,6 +12,7 @@ config = {
     production: {
         url: 'http://ghost-pirates.herokuapp.com/',
         mail: {},
+        fileStorage: false,
         database: {
             client: 'postgres',
             connection: {
@@ -37,6 +38,7 @@ config = {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
         url: 'http://localhost:2368',
+        fileStorage: false,
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
