@@ -57,5 +57,12 @@
 
         });
 
+        $.each($('span.label'), function(){
+            if(this.innerHTML.indexOf('_')>-1) {
+                $(this).html(this.innerHTML.replace('_',' '))
+            }
+            
+        });
+
     });
 })(jQuery, window);

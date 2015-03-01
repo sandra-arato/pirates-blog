@@ -672,12 +672,16 @@ footer.site-footer address p {
     box-sizing: border-box;
     width: 100%;
     padding-left: 1.2em;
+    font-size: 0.8em;
 }
 
 footer.site-footer address p:first-child {
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2px;
+    font-size: 1em;
+    padding-left: 1em;
+    
 }
 
 footer.site-footer h3 {
@@ -711,11 +715,9 @@ footer.site-footer a {
     transition: color ease 0.3s, background-color ease 0.3s;
 }
 
-footer.site-footer a.svg {
-    width: 100px;
-    height: 26px;
-    margin-left: 22px;
-    border-radius: 0;
+footer.site-footer a svg {
+    margin-left: 11px;
+    margin-top: 9px;
 }
 
 footer.site-footer a:hover {
@@ -723,8 +725,8 @@ footer.site-footer a:hover {
     background-color: #F7F7F5;
 }
 
-footer.site-footer a.svg:hover {
-    background-color: transparent;
+footer.site-footer a.svg:hover path {
+    fill: #0C7489;
 }
 
 footer.site-footer a span[class^="icon"] {
@@ -855,7 +857,7 @@ footer .share p:last-child {
     margin: 1.6em 0;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: "MadSquire-Regular";
+    font-family: "Mad Squire";
     font-size: 2em;
 }
 
