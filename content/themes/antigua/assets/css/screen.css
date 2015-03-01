@@ -711,9 +711,20 @@ footer.site-footer a {
     transition: color ease 0.3s, background-color ease 0.3s;
 }
 
+footer.site-footer a.svg {
+    width: 100px;
+    height: 26px;
+    margin-left: 22px;
+    border-radius: 0;
+}
+
 footer.site-footer a:hover {
     color: #0C7489;
     background-color: #F7F7F5;
+}
+
+footer.site-footer a.svg:hover {
+    background-color: transparent;
 }
 
 footer.site-footer a span[class^="icon"] {
