@@ -644,7 +644,7 @@ footer.site-footer {
     color: #fff;
     background: #0C7489;
     text-align: center;
-    padding-bottom: 2em;
+    padding: 2em 0;
 }
 
 footer.site-footer section {
