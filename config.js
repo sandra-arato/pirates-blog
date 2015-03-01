@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://ghost-pirates.herokuapp.com/',
+        url: 'http://carib.idoestravel.com/',
         mail: {},
         fileStorage: false,
         database: {
