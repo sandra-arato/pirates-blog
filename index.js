@@ -5,7 +5,8 @@
 var express,
     ghost,
     parentApp,
-    errors;
+    errors,
+    http;
 
 // Make sure dependencies are installed and file system permissions are correct.
 require('./core/server/utils/startup-check').check();
@@ -13,7 +14,8 @@ require('./core/server/utils/startup-check').check();
 // Proceed with startup
 express = require('express');
 ghost = require('./core');
-errors = require('./core/server/errors');
+errors = require('./core/server/errors'),
+http = require('http');
 
 // Create our parent express app instance.
 parentApp = express();
@@ -27,3 +29,9 @@ ghost().then(function (ghostServer) {
 }).catch(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
 });
+
+
+
+setInterval(function() {
+    http.get('http://ghost-pirates.herokuapp.com');
+}, 300000);
